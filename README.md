@@ -19,6 +19,52 @@ Production-grade Healthcare AI Assistant using FastAPI, LangChain, LangGraph, FA
 - Logging and monitoring
 
 ---
+```mermaid id="3xzjlwm"
+flowchart LR
+
+    A["Medical Documents<br>PDFs / Research Papers"]
+
+    B["Document Loader"]
+
+    C["Text Chunking"]
+
+    D["Embedding Model<br>BGE / Sentence Transformers"]
+
+    E["FAISS Vector Store"]
+
+    F["User Query"]
+
+    G["Query Embedding"]
+
+    H["Retriever"]
+
+    I["Context Compression"]
+
+    J["Prompt Builder"]
+
+    K["Open Source LLM<br>Llama / Mistral"]
+
+    L["Final Medical Response"]
+
+    A --> B
+    B --> C
+    C --> D
+    D --> E
+
+    F --> G
+    G --> H
+
+    E --> H
+
+    H --> I
+    I --> J
+
+    F --> J
+
+    J --> K
+
+    K --> L
+```
 
 # 🧠 Tech Stack
 
